@@ -17,5 +17,5 @@ POST http://localhost:8080/api/task/
 
 DELETE http://localhost:8080/api/task/:id
 
-## MONGO:
+## MONGO
 localhost:27018
