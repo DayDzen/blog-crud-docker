@@ -23,7 +23,7 @@ type Task struct {
 }
 
 func init() {
-	clientOptions := options.Client().ApplyURI("mongodb://localhost:27017/")
+	clientOptions := options.Client().ApplyURI("mongodb://mongo:27017/")
 	client, err := mongo.Connect(ctx, clientOptions)
 	if err != nil {
 		log.Fatal(err)
@@ -160,5 +160,5 @@ func main() {
 	s.HandleFunc("/task/{id}", updateTask).Methods("PUT")
 	s.HandleFunc("/task/{id}", deleteTask).Methods("DELETE")
 
-	log.Fatal(http.ListenAndServe(":8000", s)) // Run Server
+	log.Fatal(http.ListenAndServe(":8080", s)) // Run Server
 }

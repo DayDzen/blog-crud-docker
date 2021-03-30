@@ -8,6 +8,6 @@ COPY . .
 RUN go get ./...
 RUN go install ./...
 
-EXPOSE 8000
+EXPOSE 8080
 
 CMD ["go", "run", "main.go"]
