@@ -1,5 +1,5 @@
 # blog-crud-docker
-
+## Run docker compose
 docker-compose up --build
 
 ## Body example
