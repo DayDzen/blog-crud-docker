@@ -5,7 +5,7 @@ docker-compose up --build
 ## Body example
 {
     "text": "some text",
-    "completed": "some text"
+    "completed": false
 }
 
 ## URLS
