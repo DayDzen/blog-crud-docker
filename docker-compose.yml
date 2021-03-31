@@ -17,9 +17,8 @@ services:
     ports:
       - '27018:27017'
     volumes:
-      - ./mongodb:/data/db
-      - ./mongodb_config:/data/configdb
-    networks: 
+      - ./data/db:/data/db
+    networks:
       - local
 networks:
   local:
