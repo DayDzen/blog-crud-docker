@@ -2,12 +2,11 @@ FROM golang:latest
 
 ENV GO111MODULE on
 
-WORKDIR /go/src/github.com/DayDzen/blog-crud-docker
+WORKDIR /app
 COPY . .
 
+RUN go get github.com/cespare/reflex
 RUN go get ./...
 RUN go install ./...
 
-EXPOSE 8080
-
-CMD ["go", "run", "main.go"]
+ENTRYPOINT ["reflex", "-c", "reflex.conf"]

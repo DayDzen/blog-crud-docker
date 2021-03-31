@@ -36,7 +36,7 @@ func init() {
 
 	collection = client.Database("tasker").Collection("tasks")
 
-	fmt.Println("Connected to MongoDB!")
+	fmt.Println("Connected to MongoDB!!")
 }
 
 func createTask(w http.ResponseWriter, r *http.Request) {
